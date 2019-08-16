@@ -8,14 +8,14 @@ $main-background: #fdfdfd;
 $brand-radius: 3rem;
 $vanilla-radius: 3rem;
 $background-lighter-blue: #d9f5f2;
-$box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+$box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 $placeholder-color: #469c9388;
 
 $success-purple: #8313dd;
+$cornflower-blue: #3FB1CE;
 $gradient: linear-gradient(to right, #0ea08e, #0ed755);
 $clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
 $btn-padding: 0.75rem 2rem;
-
 
 .gradient-background {
   clip-path: $clip-path;
@@ -27,14 +27,28 @@ $btn-padding: 0.75rem 2rem;
   background-image: url("./pickups/topography.svg"), $gradient;
 }
 
+.map-gradient-overlay {
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to top, black, transparent 42%);
+  z-index: 1;
+}
+
+.mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right {
+  display: none;
+}
+
 .address-cards-container {
-  position: relative;
+  position: absolute;
   border: none;
-  bottom: 10rem;
   z-index: 100;
+  width: 100%;
+  bottom: 1.5rem;
   .address-card {
     display: grid;
-    margin: 0rem 1rem;
+    margin: 0rem 1.5rem;
     grid-template-columns: 5fr 1fr;
     .address {
       letter-spacing: 0.06rem;
@@ -45,10 +59,12 @@ $btn-padding: 0.75rem 2rem;
       position: absolute;
       left: -0.7rem;
       top: -1.5rem;
-      background-color: $light-gray;
+      color: #fefefe;
+      background-color: $cornflower-blue;
       border-radius: 50%;
       height: 3rem;
       width: 3rem;
+      font-weight: bold;
       box-shadow: $box-shadow;
       display: flex;
       align-items: center;
@@ -83,6 +99,11 @@ $btn-padding: 0.75rem 2rem;
       display: flex;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      &:hover {
+        background-color: lightgray;
+      }
     }
   }
 }
@@ -130,6 +151,8 @@ $btn-padding: 0.75rem 2rem;
   border-radius: $vanilla-radius;
   padding: $btn-padding;
   margin-top: 1rem;
+  box-shadow: $box-shadow;
+  transition: all 0.2s ease;
 }
 .btn:hover {
   opacity: 0.5;
@@ -147,7 +170,8 @@ $btn-padding: 0.75rem 2rem;
   .nav-link {
     margin-left: 1rem;
   }
-  .nav-link:hover, .nav-link:active {
+  .nav-link:hover,
+  .nav-link:active {
     border: none;
     background-color: $background-input;
   }

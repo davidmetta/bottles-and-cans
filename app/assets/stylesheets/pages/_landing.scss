@@ -8,6 +8,7 @@ $box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 $placeholder-color: #469c9388;
 
 $success-purple: #8313dd;
+$cornflower-blue: #3FB1CE;
 $clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
 
 $gradient: linear-gradient(to right bottom, rgba(14, 160, 142, .5), rgba(5, 109, 42, 1));
@@ -39,7 +40,8 @@ $btn-padding: 0.75rem 2rem;
   background: white;
   margin: 0rem 10rem 1.5rem 10rem;
   box-shadow: $box-shadow;
+  transition: all .2s ease;
   &:hover {
-    background-color: $light-gray;
+    background-color: lightgray;
   }
 }
