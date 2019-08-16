@@ -6,4 +6,8 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:account_update, keys: [:location])
   end
+
+  def after_sign_in_path_for(resource)
+    home_path
+  end
 end
