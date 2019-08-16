@@ -37,9 +37,6 @@ class PickupsController < ApplicationController
   def destroy
   end
 
-  def confirmation
-  end
-
   def reserve
     @pickup = Pickup.find(params[:id])
     redirect_to pickup_path(@pickup) if @pickup.update(collector_id: current_user.id, status: 'reserved')
