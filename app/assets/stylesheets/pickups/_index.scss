@@ -11,9 +11,11 @@ $background-lighter-blue: #d9f5f2;
 $box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
 $placeholder-color: #469c9388;
 
+$success-purple: #8313dd;
 $gradient: linear-gradient(to right, #0ea08e, #0ed755);
+$clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+$btn-padding: 0.75rem 2rem;
 
-$clip-path: polygon(0 0, 100% 0, 100% 69%, 0% 100%);
 
 .gradient-background {
   clip-path: $clip-path;
@@ -121,14 +123,32 @@ $clip-path: polygon(0 0, 100% 0, 100% 69%, 0% 100%);
   }
 }
 .btn {
-  background-color: #00a796;
-  background-image: $gradient;
+  // background-color: #00a796;
+  // background-image: $gradient;
+  background-color: $success-purple;
   color: #e0ffff;
   border-radius: $vanilla-radius;
-  padding: 0.75rem 2rem;
+  padding: $btn-padding;
   margin-top: 1rem;
 }
 .btn:hover {
   opacity: 0.5;
   color: $light-gray;
+}
+
+.home-page__nav {
+  margin: 0 auto;
+  display: block;
+  background: $background-input;
+  border-radius: $vanilla-radius;
+  width: 17rem;
+  padding: 0.6rem;
+  margin-top: 5rem;
+  .nav-link {
+    margin-left: 1rem;
+  }
+  .nav-link:hover, .nav-link:active {
+    border: none;
+    background-color: $background-input;
+  }
 }
