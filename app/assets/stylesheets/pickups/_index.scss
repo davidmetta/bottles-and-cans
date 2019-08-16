@@ -16,7 +16,6 @@ $gradient: linear-gradient(to right, #0ea08e, #0ed755);
 $clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
 $btn-padding: 0.75rem 2rem;
 
-
 .gradient-background {
   clip-path: $clip-path;
   position: absolute;
@@ -28,10 +27,11 @@ $btn-padding: 0.75rem 2rem;
 }
 
 .address-cards-container {
-  position: relative;
+  position: absolute;
   border: none;
-  bottom: 10rem;
+  bottom: 1rem;
   z-index: 100;
+  width: 100%;
   .address-card {
     display: grid;
     margin: 0rem 1rem;
@@ -131,7 +131,7 @@ $btn-padding: 0.75rem 2rem;
   padding: $btn-padding;
   margin-top: 1rem;
   box-shadow: $box-shadow;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 .btn:hover {
   opacity: 0.5;
@@ -149,7 +149,8 @@ $btn-padding: 0.75rem 2rem;
   .nav-link {
     margin-left: 1rem;
   }
-  .nav-link:hover, .nav-link:active {
+  .nav-link:hover,
+  .nav-link:active {
     border: none;
     background-color: $background-input;
   }
