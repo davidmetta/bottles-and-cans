@@ -1,2 +1,9 @@
-<div><%= link_to 'create new pickup', new_pickup_path %></div>
-<div><%= link_to 'index (map)', pickups_path %></div>
+<ul class="nav nav-tabs">
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">I WANT TO....</a>
+    <div class="dropdown-menu">
+      <%= link_to 'index (map)', pickups_path, class: "dropdown-item" %>
+      <%= link_to 'create new pickup', new_pickup_path, class: "dropdown-item" %>
+    </div>
+  </li>
+</ul>
