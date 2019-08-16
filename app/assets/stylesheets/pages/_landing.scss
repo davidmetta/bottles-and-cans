@@ -1,20 +1,45 @@
-.background-image{
-  background-image: url("trash-ball.jpg");
+$background-input: #fefefe;
+$color-text-on-blue-background: #469c93;
+$main-background: #fdfdfd;
+$brand-radius: 3rem;
+$vanilla-radius: 3rem;
+$background-lighter-blue: #d9f5f2;
+$box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+$placeholder-color: #469c9388;
+
+$success-purple: #8313dd;
+$clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+
+$gradient: linear-gradient(to right bottom, rgba(14, 160, 142, .5), rgba(5, 109, 42, 1));
+$btn-padding: 0.75rem 2rem;
+
+.background-image {
+  background-image: $gradient, url("trash-ball.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  background-position: 52%;
+  a:hover {
+    text-decoration: none;
+  }
 }
-#brand-name{
-  font-size: 72px;
+.brand-name {
+  font-size: 6.8rem;
   text-align: center;
   padding-top: 90px;
+  color: #fefefe;
+  margin-bottom: 4rem;
 }
-.yellow-button{
-  background-color: #FFF226;
-  border-radius: 28px;
-  padding: 10px;
+.btn--landing-page {
+  border-radius: $vanilla-radius;
+  padding: $btn-padding;
   text-align: center;
   text-decoration: none;
   color: black;
-  width: 250px;
+  background: white;
+  margin: 0rem 10rem 1.5rem 10rem;
+  box-shadow: $box-shadow;
+  &:hover {
+    background-color: $light-gray;
+  }
 }

@@ -1,15 +1,10 @@
 <div class=" background-image">
-  <h1 id="brand-name">Bottles + Cans</h1>
-  <div class="row col-xs-12">
-    <div>
-      <%= link_to new_user_session_path do %>
-        <div class="yellow-button">Sign In</div>
-      <% end %>
-    </div>
-    <div>
-    <%= link_to new_user_registration_path do %>
-      <div class="yellow-button">Sign Up</div>
+  <h1 id="brand-name" class="brand-name">Bottles + Cans</h1>
+    <%= link_to new_user_session_path do %>
+      <div class="btn--landing-page">Sign In</div>
     <% end %>
-    </div>
-  </div>
+
+    <%= link_to new_user_registration_path do %>
+      <div class="btn--landing-page">Sign Up</div>
+    <% end %>
 </div>
