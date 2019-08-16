@@ -8,20 +8,16 @@
     font-size: 48px;
     font-weight: bold;
   }
+  .title {
+    margin-bottom: 0rem;
+  }
 }
 
-.show-h22 {
-  margin: 15px 0px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  h2 {
-    padding: 5px 15px;
-    background-color: grey;
-    font-size: 48px;
-    font-weight: lighter;
-  }
+h2 {
+  padding: 5px 15px;
+  font-size: 48px;
+  font-weight: lighter;
+  text-align: center;
 }
 
 .show-container {

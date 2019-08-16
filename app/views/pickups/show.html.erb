@@ -1,9 +1,8 @@
 <div class="show-h2">
-  <h2>PICKUP</h2>
+  <h2 class="title">PICKUP</h2>
 </div>
-<div class="show-h22">
   <h2><%= @pickup.status %></h2>
-</div>
+
 
 <div class="show-container">
   <p><%= image_tag('bottle.svg') %><%= @pickup.bottles %></p>
@@ -18,3 +17,5 @@
     <%= link_to 'completed', completed_path(@pickup), method: 'post', class: 'btn' %>
   <% end %>
 </div>
+
+<div class="gradient-background"></div>
