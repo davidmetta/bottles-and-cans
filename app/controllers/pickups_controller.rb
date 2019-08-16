@@ -1,6 +1,6 @@
 class PickupsController < ApplicationController
   def index
-    @pickups = Pickup.geocoded
+    @pickups = Pickup.geocoded.where.not(user: current_user, status: 'completed')
 
     @markers = @pickups.map do |pickup|
       {
@@ -25,6 +25,10 @@ class PickupsController < ApplicationController
     redirect_to pickup_path(@pickup) if @pickup.save
   end
 
+  def edit
+    @pickup = Pickup.find(params[:id])
+  end
+
   def update
     @pickup = Pickup.find(params[:id])
     redirect_to pickup_path(@pickup) if @pickup.update(pickup_params)
@@ -38,7 +42,12 @@ class PickupsController < ApplicationController
 
   def reserve
     @pickup = Pickup.find(params[:id])
-    @pickup.update(collector_id: current_user.id, status: 'reserved')
+    redirect_to pickup_path(@pickup) if @pickup.update(collector_id: current_user.id, status: 'reserved')
+  end
+
+  def completed
+    @pickup = Pickup.find(params[:id])
+    redirect_to pickups_path if @pickup.update(status: 'completed')
   end
 
   private

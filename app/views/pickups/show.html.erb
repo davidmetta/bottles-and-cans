@@ -1,1 +1,11 @@
-show of pickup (owner view) - update your pickup request here
+<h2>Show page</h2>
+bottles: <p><%= @pickup.bottles %></p>
+location: <p><%= @pickup.location %></p>
+info: <p><%= @pickup.info %></p>
+status: <p><%= @pickup.status %></p>
+
+<% if @pickup.user == current_user %>
+  <%= link_to 'edit', edit_pickup_path(@pickup) %>
+<% else %>
+  <%= link_to 'completed', completed_path(@pickup), method: 'post' %>
+<% end %>
