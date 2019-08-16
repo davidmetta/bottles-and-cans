@@ -1,11 +1,20 @@
-<h2>Show page</h2>
-bottles: <p><%= @pickup.bottles %></p>
-location: <p><%= @pickup.location %></p>
-info: <p><%= @pickup.info %></p>
-status: <p><%= @pickup.status %></p>
+<div class="show-h2">
+  <h2>PICKUP</h2>
+</div>
+<div class="show-h22">
+  <h2><%= @pickup.status %></h2>
+</div>
 
-<% if @pickup.user == current_user %>
-  <%= link_to 'edit', edit_pickup_path(@pickup) %>
-<% else %>
-  <%= link_to 'completed', completed_path(@pickup), method: 'post' %>
-<% end %>
+<div class="show-container">
+  <p><%= image_tag('bin.png') %><%= @pickup.bottles %></p>
+  <p><%= image_tag('bin.png') %><%= @pickup.location %></p>
+  <p><%= image_tag('bin.png') %><%= @pickup.info %></p>
+</div>
+
+<div class="show-button">
+  <% if @pickup.user == current_user %>
+    <%= link_to 'edit', edit_pickup_path(@pickup), class: 'btn' %>
+  <% else %>
+    <%= link_to 'completed', completed_path(@pickup), method: 'post', class: 'btn' %>
+  <% end %>
+</div>
