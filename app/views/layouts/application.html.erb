@@ -11,8 +11,6 @@
     <%= stylesheet_pack_tag 'application', media: 'all' %>
   </head>
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <%= render 'shared/navbar' unless @disable_nav %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
