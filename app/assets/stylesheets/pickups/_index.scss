@@ -1,0 +1,67 @@
+@import "new";
+
+.address-cards-container {
+  position: relative;
+  border: none;
+  bottom: 10rem;
+  z-index: 100;
+  .address-card {
+    display: grid;
+    margin: 0rem 1rem;
+    grid-template-columns: 5fr 1fr;
+    .address {
+      letter-spacing: .06rem;
+      margin-bottom: .9rem;
+    }
+
+    .card-num {
+      position: absolute;
+      left: -.7rem;
+      top: -1.5rem;
+      background-color: $light-gray;
+      border-radius: 50%;
+      height: 3rem;
+      width: 3rem;
+      box-shadow: $box-shadow;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card__wrapper-left {
+      position: relative;
+      box-shadow: $box-shadow;
+      padding: 1.5rem;
+      background-color: $light-gray;
+      border-radius: 1.2rem;
+      .icon-container {
+        margin-right: 1rem;
+      }
+      .card-wrapper-left__lower {
+        div, i, p {
+          display: inline-block;
+          margin-bottom: 0rem;
+        }
+        .fa-info {
+          position: absolute;
+          right: 1.3rem;
+        }
+      }
+    }
+    .card__wrapper-right {
+      box-shadow: $box-shadow;
+      background-color: $light-gray;
+      border-radius: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.title {
+  text-align: center;
+}
+
+.form-container {
+  padding: 0px 1.5rem;
+}
