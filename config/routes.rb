@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: 'pages#home'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :pickups, except: :edit
+  get :confirmation, to: 'pickups#confirmation'
+
+  post 'pickups/:id/reserve', to: 'pickups#reserve', as: :reserve
 end

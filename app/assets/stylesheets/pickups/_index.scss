@@ -1,0 +1,113 @@
+@import "new";
+
+$background-blue: #D9F5F2;
+$color-text-on-blue-background: #469C93;
+$main-background: #fdfdfd;
+$brand-radius: .2rem 3rem 3rem 3rem;
+$vanilla-radius: 3rem;
+$background-lighter-blue: #D9F5F2;
+$box-shadow: 0px 1px 0px rgba(0,0,0,.1);
+$placeholder-color: #469c9388;
+
+.address-cards-container {
+  position: relative;
+  border: none;
+  bottom: 10rem;
+  z-index: 100;
+  .address-card {
+    display: grid;
+    margin: 0rem 1rem;
+    grid-template-columns: 5fr 1fr;
+    .address {
+      letter-spacing: .06rem;
+      margin-bottom: .9rem;
+    }
+
+    .card-num {
+      position: absolute;
+      left: -.7rem;
+      top: -1.5rem;
+      background-color: $light-gray;
+      border-radius: 50%;
+      height: 3rem;
+      width: 3rem;
+      box-shadow: $box-shadow;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card__wrapper-left {
+      position: relative;
+      box-shadow: $box-shadow;
+      padding: 1.5rem;
+      background-color: $light-gray;
+      border-radius: 1.2rem;
+      .icon-container {
+        margin-right: 1rem;
+      }
+      .card-wrapper-left__lower {
+        div, i, p {
+          display: inline-block;
+          margin-bottom: 0rem;
+        }
+        .fa-info {
+          position: absolute;
+          right: 1.3rem;
+        }
+      }
+    }
+    .card__wrapper-right {
+      box-shadow: $box-shadow;
+      background-color: $light-gray;
+      border-radius: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 1.8rem;
+}
+
+
+.form-container {
+  padding: 0px 1.5rem;
+  .form-control {
+    font-size: 1.6rem;
+    border: none;
+    border-radius: $brand-radius;
+    padding: 2rem;
+    margin-bottom: 1.6rem;
+    background-color: $background-blue;
+    color: $color-text-on-blue-background;
+    &:focus {
+      box-shadow: 5px 1px 5px rgba(81, 203, 238, 1);
+    }
+  }
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $placeholder-color;
+    opacity: 1; /* Firefox */
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $placeholder-color;
+  }
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: $placeholder-color;
+  }
+}
+.btn {
+  background-color: #00A796;
+  color: #E0FFFF;
+  border-radius: $vanilla-radius;
+  padding: .75rem 2rem;
+}
+.btn:hover {
+  opacity: .5;
+  color: $light-gray;
+}

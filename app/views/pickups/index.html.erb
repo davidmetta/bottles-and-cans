@@ -1,0 +1,34 @@
+<div
+  id="map"
+  style="width: 100vw;
+  height: 100vh;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
+
+<div class="address-cards-container">
+  <% @pickups.each_with_index do |pickup, index| %>
+    <div class="address-card">
+        <div class="card__wrapper-left">
+          <div class="card-num"><%= index + 1 %></div>
+          <div class="card-wrapper-left__upper">
+            <h3 class="address"><%= pickup.location %></h3>
+          </div>
+          <div class="card-wrapper-left__lower">
+            <div class="icon-container icon-container--bottle">
+              <i class="fas fa-wine-bottle"></i>
+              <p class="bottle-amount"><%= pickup.bottles %></p>
+            </div>
+            <div class="icon-container icon-container--home">
+              <i class="fas fa-home"></i>
+              <p class="house-distance-amount"><%= 400 %>m</p>
+            </div>
+            <i class="fas fa-info"></i>
+          </div>
+        </div>
+        <div class="card__wrapper-right">
+          <i class="fas fa-check"></i>
+        </div>
+    </div>
+  <% end %>
+</div>
