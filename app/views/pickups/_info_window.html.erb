@@ -1,4 +1,6 @@
-<h2><%= pickup.bottles %></h2>
-<p><%= pickup.info %></p>
+<div class="info-window">
+  <h2><%= image_tag('bottle.svg') %><%= pickup.bottles %></h2>
+  <h2><%= image_tag('house.svg') %><%= pickup.location %></h2>
+</div>
 
-<%= link_to 'reserve', reserve_path(pickup), method: 'post' %>
+<%= link_to 'reserve', reserve_path(pickup), method: 'post', class: 'btn' %>
