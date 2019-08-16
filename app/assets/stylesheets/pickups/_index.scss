@@ -9,6 +9,9 @@ $background-lighter-blue: #D9F5F2;
 $box-shadow: 0px 1px 0px rgba(0,0,0,.1);
 $placeholder-color: #469c9388;
 
+$btn-gradient: linear-gradient(to right,#0EA08E, #0ED755);
+
+
 .address-cards-container {
   position: relative;
   border: none;
@@ -85,7 +88,7 @@ $placeholder-color: #469c9388;
     background-color: $background-blue;
     color: $color-text-on-blue-background;
     &:focus {
-      box-shadow: 5px 1px 5px rgba(81, 203, 238, 1);
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
     }
   }
   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -103,9 +106,11 @@ $placeholder-color: #469c9388;
 }
 .btn {
   background-color: #00A796;
+  background-image: $btn-gradient;
   color: #E0FFFF;
   border-radius: $vanilla-radius;
   padding: .75rem 2rem;
+  margin-top: 1rem;
 }
 .btn:hover {
   opacity: .5;
