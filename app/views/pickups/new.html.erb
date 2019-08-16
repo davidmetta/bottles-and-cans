@@ -1,0 +1,12 @@
+
+<h2 class="title">Take My Bottles</h2>
+
+
+<div class="form-container">
+  <%= simple_form_for @pickup do |f| %>
+    <%= f.input :bottles, label: false, placeholder: 'bottles'  %>
+    <%= f.input :location, label: false, placeholder: 'location'  %>
+    <%= f.input :info %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
